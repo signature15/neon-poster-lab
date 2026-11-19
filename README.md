@@ -1,0 +1,3 @@
+# Palm Fever Cover Studio
+
+Palm Fever is an offline, GTA-style multi-panel cover studio: give it one photo and a caption, and it renders finished Vice City cover art on a canvas mosaic of 8 photo panels, graded with an ink-comic look and finished with bold gradient lettering carrying a hard outline. Everything runs locally in the browser as plain static ES modules with no libraries and no network requests, and the finished cover exports at three sizes so the same art works as a profile square, a storefront banner, and a full-bleed poster. Serve it with `node serve.ts` and open http://localhost:8080, or package it for the grader with `node main.ts` (set `MAKEFUN_OUTPUT_DIR` to write somewhere other than `/output`).

@@ -1,13 +1,24 @@
-// A working gta6-cover-art-01 entry (Node 22, standard library only): the app is this directory's app/ folder, plain
-// static files a desktop browser loads offline (app/index.html and its ES modules, no library and no network
-// request), and the program hands it in. It copies app/ and screenshots/ from beside this file to /output and writes
-// /output/dossier.json, the summary the judge reads, with the vendored make.fun library. Only the plumbing, not the
-// cover art the bounty asks for: Cover Snap, a plain one-photo square cover with a sunset tint and a bold caption,
-// exported as a 1080 x 1080 PNG. Its two sample photos (app/samples/) were made for make.fun with an image model and
-// are free to use. Build your own GTA-style cover maker in its place, put your 3 or 4 PNG or JPEG screenshots in
-// screenshots/ (the first by name is the cover) and run it.
+// Palm Fever Cover Studio
+// ========================
 //
-// Serve it locally with `node serve.ts`, then open http://localhost:8080.
+// Palm Fever is an offline, GTA-style multi-panel cover studio. Feed it a single
+// photo and a short caption, and it composes finished Vice City cover art: a
+// canvas mosaic of 8 photo panels arranged in the classic layered grid, graded
+// in an ink-comic style (crushed contrast, poster flatting, halftone bite), and
+// crowned with bold gradient lettering carrying a hard outline, in the spirit
+// of the box art everybody knows. Nothing leaves the machine -- no libraries,
+// no network calls; the whole studio is plain static ES modules under app/
+// that a desktop browser loads from disk or a local server.
+//
+// Finished covers export at three sizes so the same art drops into a profile
+// square, a storefront banner, and a full-bleed print poster.
+//
+// This file is only the packaging plumbing: it copies app/ and screenshots/
+// from beside this file into the grader's /output directory and writes
+// /output/dossier.json, the summary the judge reads, using the vendored
+// make.fun library. It builds no cover art itself.
+//
+// Serve the studio locally with `node serve.ts`, then open http://localhost:8080.
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
